@@ -8,6 +8,13 @@ dependencies {
 
 repositories {
 	maven {
+		maven {
+			url 'https://maven.aliyun.com/repository/public/'
+		}
+		maven {
+			url 'https://maven.aliyun.com/repository/spring/'
+		}
+		mavenLocal()
 		url "https://repo.spring.io/release"
 		mavenContent {
 			includeGroup "io.spring.asciidoctor"

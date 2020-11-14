@@ -289,8 +289,14 @@ configure(allprojects) { project ->
 			cacheChangingModulesFor 0, "seconds"
 		}
 		repositories {
+			maven {
+				url 'https://maven.aliyun.com/repository/public/'
+			}
+			maven {
+				url 'https://maven.aliyun.com/repository/spring/'
+			}
+			mavenLocal()
 			mavenCentral()
-			maven { url "https://repo.spring.io/libs-spring-framework-build" }
 		}
 	}
 	configurations.all {
@@ -422,5 +428,18 @@ configure(rootProject) {
 				artifact distZip
 			}
 		}
+	}
+}
+
+allprojects {
+	repositories {
+		maven {
+			url 'https://maven.aliyun.com/repository/public/'
+		}
+		maven {
+			url 'https://maven.aliyun.com/repository/spring/'
+		}
+		mavenLocal()
+		mavenCentral()
 	}
 }
